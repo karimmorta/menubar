@@ -196,7 +196,7 @@ export class Menubar extends EventEmitter {
     // `.setPosition` crashed on non-integers
     // https://github.com/maxogden/menubar/issues/233
     this._browserWindow.setPosition(Math.round(x), Math.round(y));
-    this._browserWindow.show();
+    this._browserWindow.showInactive();
     this.emit('after-show');
     return;
   }
